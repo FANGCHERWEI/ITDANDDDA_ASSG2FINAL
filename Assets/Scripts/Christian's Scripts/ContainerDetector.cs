@@ -8,7 +8,6 @@ public class ContainerDetector : MonoBehaviour
 {
     public Dictionary<string, bool> ingredientsToDetect = new Dictionary<string, bool>();
     public List<GameObject> ingredients = new List<GameObject>();
-    public LoggerController loggerController;
 
     public bool containsAllIngredients;
 
