@@ -328,3 +328,139 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1255.667128 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R
+  artifactKey: Guid(7c24b8ba75a91c848bac479eb570d39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R using Guid(7c24b8ba75a91c848bac479eb570d39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d1c6a0d1cf311b94827f251b910d3d') in 0.008092 seconds 
+  Import took 0.012025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060834 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/27.jpg
+  artifactKey: Guid(9aaca189cab76164483ac2583af4fa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/27.jpg using Guid(9aaca189cab76164483ac2583af4fa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4137465cc81db03c0d819d37d29b6f7') in 0.039863 seconds 
+  Import took 0.043039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/30.png
+  artifactKey: Guid(ef8ee71e53f350d46a6c8f3fd17069c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/30.png using Guid(ef8ee71e53f350d46a6c8f3fd17069c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533d0066b09ca5bb1a6bc6d3ebe5a525') in 0.010335 seconds 
+  Import took 0.013610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/plet.VRaddd.jpg
+  artifactKey: Guid(b0b06d4327c868b4f8d33bf01ccd819f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/plet.VRaddd.jpg using Guid(b0b06d4327c868b4f8d33bf01ccd819f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9d1fe86e0864f8e5726e1e2e0f7fe4') in 0.007566 seconds 
+  Import took 0.010563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/fbx.FBX
+  artifactKey: Guid(ad2586b0772532d40967a8ec7e25882e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/fbx.FBX using Guid(ad2586b0772532d40967a8ec7e25882e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f097fa051f30a8dd5b10b7b9a77c7d8') in 6.087055 seconds 
+  Import took 6.099880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/plet.VRayZDepth.jpg
+  artifactKey: Guid(d07a4ae1f84b13c489ec124cbf1b7447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/plet.VRayZDepth.jpg using Guid(d07a4ae1f84b13c489ec124cbf1b7447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d011f4d91c1d5f84b2ce3162361207') in 0.010486 seconds 
+  Import took 0.014391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/obj.obj
+  artifactKey: Guid(61cfab8d71547d247a1bc9cc3ae08573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/obj.obj using Guid(61cfab8d71547d247a1bc9cc3ae08573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637c4c6ffa4040ef471c648a93114f49') in 6.078736 seconds 
+  Import took 6.091372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/opacitry.jpg
+  artifactKey: Guid(52bba03299bbf2d44aba1fa79ad0dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/opacitry.jpg using Guid(52bba03299bbf2d44aba1fa79ad0dbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e464f6857f67b263d7155db9d2ed787') in 0.012267 seconds 
+  Import took 0.016174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/uploads_files_2050294_RC247-PL-10-R/28.jpg
+  artifactKey: Guid(64a245418d88b0f48ab1567b5526b548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uploads_files_2050294_RC247-PL-10-R/28.jpg using Guid(64a245418d88b0f48ab1567b5526b548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91c2fd7dc49bd494ce7e78fec4d69106') in 0.009553 seconds 
+  Import took 0.012788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 395.510145 seconds.
+  path: Assets/apricot-ceiling-lamp-matte-black-56051
+  artifactKey: Guid(213edc7c011afc94d859bd74057a0e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/apricot-ceiling-lamp-matte-black-56051 using Guid(213edc7c011afc94d859bd74057a0e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0562adef41b7c1997a39208fa3aeeb43') in 0.004128 seconds 
+  Import took 0.007912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.562221 seconds.
+  path: Assets/apricot-ceiling-lamp-matte-black-56051/source
+  artifactKey: Guid(441d18ac9c3f3904d98e7bb90e1538f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/apricot-ceiling-lamp-matte-black-56051/source using Guid(441d18ac9c3f3904d98e7bb90e1538f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23f6da6d2dd036dec75a1c1b1511314') in 0.003920 seconds 
+  Import took 0.007711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.838452 seconds.
+  path: Assets/apricot-ceiling-lamp-matte-black-56051/source/56051
+  artifactKey: Guid(f2c6c83665680ff44bd7ac8c67fd7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/apricot-ceiling-lamp-matte-black-56051/source/56051 using Guid(f2c6c83665680ff44bd7ac8c67fd7ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37caaedbcbb87749942a24950d36bd7') in 0.004151 seconds 
+  Import took 0.007603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038787 seconds.
+  path: Assets/apricot-ceiling-lamp-matte-black-56051/source/56051/56051.obj
+  artifactKey: Guid(2747f7e6919fca44ab5385c7cb1a0f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/apricot-ceiling-lamp-matte-black-56051/source/56051/56051.obj using Guid(2747f7e6919fca44ab5385c7cb1a0f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '267d105f27ad8dda8d552abe32a74c22') in 0.182425 seconds 
+  Import took 0.186211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2465.309615 seconds.
+  path: Assets/Meshes/NEWCEILING.fbx
+  artifactKey: Guid(128200ff987a1e040b003a2c0a478d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/NEWCEILING.fbx using Guid(128200ff987a1e040b003a2c0a478d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f3bffd85b5c8cccf9bc6fa71444157') in 0.055837 seconds 
+  Import took 0.066516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.645669 seconds.
+  path: Assets/Materials/New Material.mat
+  artifactKey: Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/New Material.mat using Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac927a4729b5afe91524e7ecd32fa9e6') in 0.009921 seconds 
+  Import took 0.013245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.325385 seconds.
+  path: Assets/Materials/newceiling.mat
+  artifactKey: Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/newceiling.mat using Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e39e5fecc98f4da6bdb8407ce19c0aa') in 0.009414 seconds 
+  Import took 0.012939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.323613 seconds.
+  path: Assets/Materials/newceiling.mat
+  artifactKey: Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/newceiling.mat using Guid(9932fac2b237684498cb6cde4fde533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da9c328b41fc517df3426f4cb063b746') in 0.041481 seconds 
+  Import took 0.045294 seconds .
+
