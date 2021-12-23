@@ -3640,3 +3640,27 @@ Received Import Request.
 Start importing Assets/Kitchen using Guid(6c7a2166a7d4a0d47945feaab6aca82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '237ecfbc3bc87d72a308bcbf6a1f37de') in 0.004920 seconds 
   Import took 0.008497 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 5261.246611 seconds.
+  path: Assets/Meshes/Crab.fbx
+  artifactKey: Guid(96435875096026643b417c7ea0a2e307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshes/Crab.fbx using Guid(96435875096026643b417c7ea0a2e307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96402a6e1f047ea5c6aaca6ceb821422') in 0.052268 seconds 
+  Import took 0.076854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.373198 seconds.
+  path: Assets/Materials/Crab.mat
+  artifactKey: Guid(7dcb9d730c42b594aa06875258fcb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Crab.mat using Guid(7dcb9d730c42b594aa06875258fcb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17dfbc423ee5a0f846dcf4a2663c90f') in 0.011843 seconds 
+  Import took 0.015267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.437976 seconds.
+  path: Assets/Materials/Crab.mat
+  artifactKey: Guid(7dcb9d730c42b594aa06875258fcb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Crab.mat using Guid(7dcb9d730c42b594aa06875258fcb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188d9271ee36c28f238c4748faad59fb') in 0.033458 seconds 
+  Import took 0.037197 seconds .
+
