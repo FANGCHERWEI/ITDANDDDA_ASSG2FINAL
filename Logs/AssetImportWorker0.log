@@ -3664,3 +3664,4 @@ Received Import Request.
 Start importing Assets/Materials/Crab.mat using Guid(7dcb9d730c42b594aa06875258fcb220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188d9271ee36c28f238c4748faad59fb') in 0.033458 seconds 
   Import took 0.037197 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
