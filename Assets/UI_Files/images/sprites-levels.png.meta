@@ -290,9 +290,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 118
-        y: 733
+        y: 731
         width: 41
-        height: 36
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,7 +609,7 @@ TextureImporter:
         width: 119
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -617,6 +617,27 @@ TextureImporter:
       bones: []
       spriteID: 2a377f72f7bff7510800000000000000
       internalID: 1549233320388686754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites-levels_16
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 404
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7512978425117bdb0800000000000000
+      internalID: -4776329834702233257
       vertices: []
       indices: 
       edges: []
