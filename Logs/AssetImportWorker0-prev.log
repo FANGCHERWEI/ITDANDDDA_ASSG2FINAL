@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 18363.720; Version 1909; 64bit' Language: 'en' Physical Memory: 16299 MB
+OS: 'Windows 10 Home; OS build 19043.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 12072 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,113 +11,113 @@ C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
+C:/Users/Beak Wei Xiang/Documents/School Stuff/Semester 4/ITD_DDA_ASG2_URP/ITDANDDDA_ASSG2FINAL
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60834
-Successfully changed project path to: C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
-C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
+50368
+Successfully changed project path to: C:/Users/Beak Wei Xiang/Documents/School Stuff/Semester 4/ITD_DDA_ASG2_URP/ITDANDDDA_ASSG2FINAL
+C:/Users/Beak Wei Xiang/Documents/School Stuff/Semester 4/ITD_DDA_ASG2_URP/ITDANDDDA_ASSG2FINAL
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 101.29 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.20f1 (41c4e627c95f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Beak Wei Xiang/Documents/School Stuff/Semester 4/ITD_DDA_ASG2_URP/ITDANDDDA_ASSG2FINAL/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2080 SUPER (ID=0x1e81)
+    Renderer: Intel(R) UHD Graphics (ID=0x9b41)
     Vendor:   
-    VRAM:     8010 MB
-    Driver:   30.0.14.7212
+    VRAM:     6036 MB
+    Driver:   27.20.100.9664
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001920 seconds.
+Registered in 0.002179 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.05 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 79.30 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.766 seconds
+- Completed reload, in  2.385 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2766ms)
-		BeginReloadAssembly (37ms)
+	ReloadAssembly (2386ms)
+		BeginReloadAssembly (82ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (326ms)
-			LoadAssemblies (36ms)
+		EndReloadAssembly (766ms)
+			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (112ms)
+			SetupTypeCache (283ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (139ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (295ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (58ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				RefreshPlugins (79ms)
+				BeforeProcessingInitializeOnLoad (26ms)
+				ProcessInitializeOnLoadAttributes (134ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005915 seconds.
+Registered in 0.015645 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 82.71 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.858 seconds
+- Completed reload, in  2.019 seconds
 Domain Reload Profiling:
-	ReloadAssembly (859ms)
-		BeginReloadAssembly (105ms)
+	ReloadAssembly (2020ms)
+		BeginReloadAssembly (221ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (709ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (1700ms)
+			LoadAssemblies (141ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (228ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (263ms)
+			SetupTypeCache (513ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (608ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (45ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (83ms)
+				BeforeProcessingInitializeOnLoad (121ms)
+				ProcessInitializeOnLoadAttributes (381ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.54 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2728 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 128.0 MB.
-System memory in use after: 128.2 MB.
+Unloading 2116 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.0 MB.
+System memory in use after: 93.1 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3167.
-Total: 2.877600 ms (FindLiveObjects: 0.214500 ms CreateObjectMapping: 0.107100 ms MarkObjects: 2.478800 ms  DeleteObjects: 0.076300 ms)
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 2538.
+Total: 7.621600 ms (FindLiveObjects: 0.532000 ms CreateObjectMapping: 0.236000 ms MarkObjects: 6.639700 ms  DeleteObjects: 0.208900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -126,85 +126,31 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/HDRI Skybox
-  artifactKey: Guid(b8dc12733ffbf014da6ad6d6340a2b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox using Guid(b8dc12733ffbf014da6ad6d6340a2b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881c4def978739c93d1b5e83a3a77011') in 0.007116 seconds 
-  Import took 0.010696 seconds .
+  path: Assets/Scripts/Wei Xiang's Scripts/UIManager.cs
+  artifactKey: Guid(4398caf05191adf46ad028a545cf4604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Wei Xiang's Scripts/UIManager.cs using Guid(4398caf05191adf46ad028a545cf4604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11a7f95eba0fe6818f70837819fa92f3') in 0.055785 seconds 
+  Import took 0.064658 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.688991 seconds.
-  path: Assets/HDRI Skybox/sunset_fairway_4k.exr
-  artifactKey: Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/sunset_fairway_4k.exr using Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa55a3b5822cfcc0e1be1d076fee4bbf') in 0.054536 seconds 
-  Import took 0.058036 seconds .
+  Time since last request: 0.000297 seconds.
+  path: Assets/Scripts/Wei Xiang's Scripts/SaveLevelData.cs
+  artifactKey: Guid(00a6f79f432c01546b456c216da31339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Wei Xiang's Scripts/SaveLevelData.cs using Guid(00a6f79f432c01546b456c216da31339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae2a2504aebacf7905061ba484d42a0f') in 0.004317 seconds 
+  Import took 0.010646 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.386782 seconds.
-  path: Assets/HDRI Skybox/sunset_fairway_4k.exr
-  artifactKey: Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/sunset_fairway_4k.exr using Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e239bd7333c61aa495f15881fb1482') in 0.068756 seconds 
-  Import took 0.074173 seconds .
+  Time since last request: 24.378555 seconds.
+  path: Assets/Scripts/Wei Xiang's Scripts/GameMenuManager.cs
+  artifactKey: Guid(160ed09c5ede19b488d83147d6a1c16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Wei Xiang's Scripts/GameMenuManager.cs using Guid(160ed09c5ede19b488d83147d6a1c16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6424a5870f5bb48315a6e03853da1e92') in 0.004682 seconds 
+  Import took 0.010624 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 10.542083 seconds.
-  path: Assets/HDRI Skybox/Sunset Skybox.mat
-  artifactKey: Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/Sunset Skybox.mat using Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139f39871a33272edf22fc0e42345b8e') in 0.121455 seconds 
-  Import took 0.126791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 228.314160 seconds.
-  path: Assets/Kitchen/Materials/glass.mat
-  artifactKey: Guid(d68c7364e65ebfc4191e82c777b4e376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Kitchen/Materials/glass.mat using Guid(d68c7364e65ebfc4191e82c777b4e376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c808f9abf28dcee8a8a36fc19ff149f8') in 0.010334 seconds 
-  Import took 0.014481 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/Liquid/Example/Prefabs/Glass.prefab
-  artifactKey: Guid(dcd73b51eabfdb64d8180fae92d8e674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Prefabs/Glass.prefab using Guid(dcd73b51eabfdb64d8180fae92d8e674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a50df8048be6f5061d2d4e01402aad') in 0.026515 seconds 
-  Import took 0.030005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Liquid/Example/Materials/Glass.mat
-  artifactKey: Guid(f5d0e024007d29c44a932f8cc87b3520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Materials/Glass.mat using Guid(f5d0e024007d29c44a932f8cc87b3520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e68526c93f90bdd7fe9856b6957250d') in 0.009428 seconds 
-  Import took 0.012643 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Liquid/Example/Models/Glass.fbx
-  artifactKey: Guid(f3a07e53f958fbd4d9561fbbb678e026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Models/Glass.fbx using Guid(f3a07e53f958fbd4d9561fbbb678e026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2b6b1a52c43141e56e02a916cfd5c7') in 0.054016 seconds 
-  Import took 0.057579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Liquid/Example/Materials/GlassWater.mat
-  artifactKey: Guid(35c71b2b1b75f7044b93164722540807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Materials/GlassWater.mat using Guid(35c71b2b1b75f7044b93164722540807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd3a994f7ef111829b60bd45e2ef6ae1') in 0.013171 seconds 
-  Import took 0.016638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 750.911295 seconds.
-  path: Assets/HDRI Skybox/Sunset Skybox.mat
-  artifactKey: Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/Sunset Skybox.mat using Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22de71095f8dd5f2bfc2f710ff945b0b') in 0.040486 seconds 
-  Import took 0.046352 seconds .
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
