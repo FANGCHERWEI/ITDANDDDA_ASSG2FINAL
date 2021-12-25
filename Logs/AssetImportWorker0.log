@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 18363.720; Version 1909; 64bit' Language: 'en' Physical Memory: 16299 MB
+OS: 'Windows 10 Home; OS build 19043.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 16297 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Unity.exe
+D:\Unity\2020.3.20f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
+D:/re/np/2.2/ITDDDA/ITDANDDDA_ASSG2FINAL
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60834
-Successfully changed project path to: C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
-C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL
+51460
+Successfully changed project path to: D:/re/np/2.2/ITDDDA/ITDANDDDA_ASSG2FINAL
+D:/re/np/2.2/ITDDDA/ITDANDDDA_ASSG2FINAL
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 69.34 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.20f1 (41c4e627c95f)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/chewe/OneDrive/Desktop/ITDANDDDA_ASSG2FINAL/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/re/np/2.2/ITDDDA/ITDANDDDA_ASSG2FINAL/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2080 SUPER (ID=0x1e81)
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   
-    VRAM:     8010 MB
+    VRAM:     6052 MB
     Driver:   30.0.14.7212
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+Mono path[0] = 'D:/Unity/2020.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56048
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001920 seconds.
+Register platform support module: D:/Unity/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001254 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.05 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.766 seconds
+- Completed reload, in  2.380 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2766ms)
-		BeginReloadAssembly (37ms)
+	ReloadAssembly (2380ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (326ms)
-			LoadAssemblies (36ms)
+		EndReloadAssembly (438ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (112ms)
+			SetupTypeCache (150ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (139ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (191ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (58ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				RefreshPlugins (68ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (74ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005915 seconds.
+Registered in 0.003543 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 66.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.858 seconds
+- Completed reload, in  1.266 seconds
 Domain Reload Profiling:
-	ReloadAssembly (859ms)
-		BeginReloadAssembly (105ms)
+	ReloadAssembly (1267ms)
+		BeginReloadAssembly (163ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (709ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1049ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (228ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (263ms)
+			SetupTypeCache (329ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (429ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (45ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (67ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (258ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2728 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 128.0 MB.
-System memory in use after: 128.2 MB.
+Unloading 3425 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 150.4 MB.
+System memory in use after: 150.6 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3167.
-Total: 2.877600 ms (FindLiveObjects: 0.214500 ms CreateObjectMapping: 0.107100 ms MarkObjects: 2.478800 ms  DeleteObjects: 0.076300 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3867.
+Total: 4.158600 ms (FindLiveObjects: 0.436100 ms CreateObjectMapping: 0.145300 ms MarkObjects: 3.486600 ms  DeleteObjects: 0.089400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,80 +131,128 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/HDRI Skybox
-  artifactKey: Guid(b8dc12733ffbf014da6ad6d6340a2b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox using Guid(b8dc12733ffbf014da6ad6d6340a2b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881c4def978739c93d1b5e83a3a77011') in 0.007116 seconds 
-  Import took 0.010696 seconds .
+  path: Assets/UI_Files
+  artifactKey: Guid(d8559faae52c2f44b80183dd76a2d82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files using Guid(d8559faae52c2f44b80183dd76a2d82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd351efedb7fe5902a13c9797db1051') in 0.006324 seconds 
+  Import took 0.011716 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.688991 seconds.
-  path: Assets/HDRI Skybox/sunset_fairway_4k.exr
-  artifactKey: Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/sunset_fairway_4k.exr using Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa55a3b5822cfcc0e1be1d076fee4bbf') in 0.054536 seconds 
-  Import took 0.058036 seconds .
+  Time since last request: 0.000258 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-BoldItalic.otf
+  artifactKey: Guid(bbc926df08bd0454d97ef1cb49b4e18b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-BoldItalic.otf using Guid(bbc926df08bd0454d97ef1cb49b4e18b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae2bca4b0fa375596c067321371d98d') in 0.238270 seconds 
+  Import took 0.243452 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.386782 seconds.
-  path: Assets/HDRI Skybox/sunset_fairway_4k.exr
-  artifactKey: Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/sunset_fairway_4k.exr using Guid(402bdea748c5b1a4892dfaaaf6570550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e239bd7333c61aa495f15881fb1482') in 0.068756 seconds 
-  Import took 0.074173 seconds .
+  Time since last request: 0.000314 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Thin.otf
+  artifactKey: Guid(8b0bb4a101b411240b9a4d2b66c3f5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Thin.otf using Guid(8b0bb4a101b411240b9a4d2b66c3f5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b306e059b1bb94ed0dff739f568d038d') in 0.015290 seconds 
+  Import took 0.020586 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.542083 seconds.
-  path: Assets/HDRI Skybox/Sunset Skybox.mat
-  artifactKey: Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/Sunset Skybox.mat using Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139f39871a33272edf22fc0e42345b8e') in 0.121455 seconds 
-  Import took 0.126791 seconds .
+  Time since last request: 0.000264 seconds.
+  path: Assets/UI_Files/gameobject/Cube.prefab
+  artifactKey: Guid(4ad7a1f138859324f85f73f9b25a80a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject/Cube.prefab using Guid(4ad7a1f138859324f85f73f9b25a80a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f8eac1386a49c09e497b63c81e4089') in 0.021199 seconds 
+  Import took 0.026468 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 228.314160 seconds.
-  path: Assets/Kitchen/Materials/glass.mat
-  artifactKey: Guid(d68c7364e65ebfc4191e82c777b4e376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Kitchen/Materials/glass.mat using Guid(d68c7364e65ebfc4191e82c777b4e376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c808f9abf28dcee8a8a36fc19ff149f8') in 0.010334 seconds 
-  Import took 0.014481 seconds .
+  Time since last request: 0.000266 seconds.
+  path: Assets/UI_Files/gameobject/canvas.prefab
+  artifactKey: Guid(0604ee99ef6bb6c4eb33b6f6960817b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject/canvas.prefab using Guid(0604ee99ef6bb6c4eb33b6f6960817b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e90b930d7393c5b83a737abd6379d32') in 0.070632 seconds 
+  Import took 0.077664 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/Liquid/Example/Prefabs/Glass.prefab
-  artifactKey: Guid(dcd73b51eabfdb64d8180fae92d8e674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Prefabs/Glass.prefab using Guid(dcd73b51eabfdb64d8180fae92d8e674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a50df8048be6f5061d2d4e01402aad') in 0.026515 seconds 
-  Import took 0.030005 seconds .
+  Time since last request: 0.000335 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Bold SDF.asset
+  artifactKey: Guid(cc7fa31c725beeb48a9bc005a6f3cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Bold SDF.asset using Guid(cc7fa31c725beeb48a9bc005a6f3cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8b29e5c52e082f015ce116e2889724') in 0.023770 seconds 
+  Import took 0.028956 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Liquid/Example/Materials/Glass.mat
-  artifactKey: Guid(f5d0e024007d29c44a932f8cc87b3520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Materials/Glass.mat using Guid(f5d0e024007d29c44a932f8cc87b3520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e68526c93f90bdd7fe9856b6957250d') in 0.009428 seconds 
-  Import took 0.012643 seconds .
+  Time since last request: 0.000295 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Regular SDF.asset
+  artifactKey: Guid(103168a39f926a9469d7a3391dc56692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Regular SDF.asset using Guid(103168a39f926a9469d7a3391dc56692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c7ed9b46e54bab9a27cb119dd7f3d8') in 0.020840 seconds 
+  Import took 0.025967 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Liquid/Example/Models/Glass.fbx
-  artifactKey: Guid(f3a07e53f958fbd4d9561fbbb678e026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Models/Glass.fbx using Guid(f3a07e53f958fbd4d9561fbbb678e026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2b6b1a52c43141e56e02a916cfd5c7') in 0.054016 seconds 
-  Import took 0.057579 seconds .
+  Time since last request: 0.000293 seconds.
+  path: Assets/UI_Files/gameobject
+  artifactKey: Guid(e6db43057a94fd047b2658d06e6a06df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject using Guid(e6db43057a94fd047b2658d06e6a06df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b096523688d96fe2e9f30e2c87172e') in 0.002659 seconds 
+  Import took 0.007349 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Liquid/Example/Materials/GlassWater.mat
-  artifactKey: Guid(35c71b2b1b75f7044b93164722540807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Liquid/Example/Materials/GlassWater.mat using Guid(35c71b2b1b75f7044b93164722540807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd3a994f7ef111829b60bd45e2ef6ae1') in 0.013171 seconds 
-  Import took 0.016638 seconds .
+  Time since last request: 0.000292 seconds.
+  path: Assets/UI_Files/gameobject/ForgetPasswordPanel.prefab
+  artifactKey: Guid(c9e3086e5245ed947acfbe918bdee278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject/ForgetPasswordPanel.prefab using Guid(c9e3086e5245ed947acfbe918bdee278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfba90cfd4f6a75e33711fc053eaf32') in 0.013267 seconds 
+  Import took 0.018152 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 750.911295 seconds.
-  path: Assets/HDRI Skybox/Sunset Skybox.mat
-  artifactKey: Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRI Skybox/Sunset Skybox.mat using Guid(629b3cef8e4bce34a94c79e09bceec10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22de71095f8dd5f2bfc2f710ff945b0b') in 0.040486 seconds 
-  Import took 0.046352 seconds .
+  Time since last request: 0.000289 seconds.
+  path: Assets/UI_Files/gameobject/LoginPanel.prefab
+  artifactKey: Guid(66a53737c91d24d41975e3085879f364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject/LoginPanel.prefab using Guid(66a53737c91d24d41975e3085879f364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5936fc3e90e6448fb4ca54521f65fb') in 0.016885 seconds 
+  Import took 0.021940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Regular.otf
+  artifactKey: Guid(6b41f06b52bfa4d41b1723cdc07010ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Regular.otf using Guid(6b41f06b52bfa4d41b1723cdc07010ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1447ea91f842b06707d5956b0299126e') in 0.013490 seconds 
+  Import took 0.019061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/UI_Files/gameobject/RegisterPanel.prefab
+  artifactKey: Guid(fd37302d88ffb004dba63f5289725303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/gameobject/RegisterPanel.prefab using Guid(fd37302d88ffb004dba63f5289725303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c57e9e65147d5098a1a3d7e80e5a9ec') in 0.012894 seconds 
+  Import took 0.018045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-ThinItalic.otf
+  artifactKey: Guid(a978944dbb4124d4b9c1a7794d06157a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-ThinItalic.otf using Guid(a978944dbb4124d4b9c1a7794d06157a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e074aa4ba64d45be823e9bd5473919') in 0.010801 seconds 
+  Import took 0.016128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Bold.otf
+  artifactKey: Guid(6653e555abf9a744eab8dac2b38e224e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Bold.otf using Guid(6653e555abf9a744eab8dac2b38e224e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469c0a69c99bbf02e9dab078ba4a5c3d') in 0.011168 seconds 
+  Import took 0.016512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/UI_Files/Fonts/WoodfordBournePRO-Italic.otf
+  artifactKey: Guid(1ec9022c4f0e0c24ca041047661c2e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts/WoodfordBournePRO-Italic.otf using Guid(1ec9022c4f0e0c24ca041047661c2e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae865425e5adc6f3d25beb534f7c1334') in 0.010726 seconds 
+  Import took 0.015856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/UI_Files/Fonts
+  artifactKey: Guid(868570f2c58dfeb42b8fefec05ad1d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Files/Fonts using Guid(868570f2c58dfeb42b8fefec05ad1d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4499705dc1b47885a70256935b87b418') in 0.005991 seconds 
+  Import took 0.010856 seconds .
 
