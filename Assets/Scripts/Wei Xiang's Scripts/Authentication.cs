@@ -14,7 +14,9 @@ public class Authentication : MonoBehaviour
     Firebase.Auth.FirebaseAuth auth;
     public DatabaseReference dbReference;
 
+    public GameObject authPage;
     public GameObject loginPage;
+    public GameObject registerPage;
     public GameObject gamePage;
 
     public static bool firstTimeLogin = false;
@@ -49,6 +51,7 @@ public class Authentication : MonoBehaviour
     public string errorForgetPassword;
     public GameObject errorForgetPasswordUI;
 
+    public bool runOnce;
 
     // initialise auth instance
     private void Awake()
@@ -73,8 +76,19 @@ public class Authentication : MonoBehaviour
         // if login is successful, bring user to home menu
         if (loggedIn)
         {
-            loginPage.SetActive(false);
+            authPage.SetActive(false);
             gamePage.SetActive(true);
+        }
+
+        if (loggedIn && runOnce)
+        {
+            // clear input fields
+            usernameInputSignUp.GetComponent<TMP_InputField>().text = "";
+            emailInputSignUp.GetComponent<TMP_InputField>().text = "";
+            passwordInputSignUp.GetComponent<TMP_InputField>().text = "";
+            // clear input fields
+            emailInputLogin.GetComponent<TMP_InputField>().text = "";
+            passwordInputLogin.GetComponent<TMP_InputField>().text = "";
         }
     }
 
@@ -122,14 +136,17 @@ public class Authentication : MonoBehaviour
                 email = newPlayer.Email;
                 // update first time login variable to be true
                 firstTimeLogin = true;
-                // update logged in variable to be true
-                loggedIn = true;
+
                 // create new player in database
                 CreateNewPlayer(newPlayer.UserId, usernameSignUp, newPlayer.Email, true);
                 // create high scores for the player in the database
                 Leaderboard(newPlayer.UserId, 0, 0, 0, 0, "Null", usernameSignUp);
                 // create allow levels in the database
                 AllowLevels(newPlayer.UserId, false, false, false);
+                
+                // update logged in variable to be true
+                loggedIn = true;
+
                 return;
             }
         });
@@ -202,6 +219,7 @@ public class Authentication : MonoBehaviour
                 loggedIn = true;
                 // update last logged in time in the database
                 UpdateLoginTime();
+                
                 return;
             }
         });
@@ -273,6 +291,8 @@ public class Authentication : MonoBehaviour
             SaveLevelData.highScoresRetrived = false;
 
             Debug.Log("User has been logged out");
+
+            SceneManager.LoadScene("UI_Game");
         }
     }
 }

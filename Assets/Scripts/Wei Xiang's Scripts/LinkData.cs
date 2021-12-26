@@ -25,7 +25,7 @@ public class LinkData : MonoBehaviour
     public string userProfileRating;
     public string totalTimePlayed;
     public float averageHighScore;
-    public int updatedOn;
+    public string updatedOn;
     public float overall;
     public float level1HighScore;
     public float level2HighScore;

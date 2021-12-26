@@ -45,7 +45,7 @@ public class SaveLevelData : MonoBehaviour
     public bool level2Played;
     public bool allowLevel2;
 
-    public int updatedOn;
+    public string updatedOn;
 
     public List<string> leaderboardByUserID = new List<string>();
     public List<float> leaderboardByAverageHighScore = new List<float>();
@@ -609,8 +609,15 @@ public class SaveLevelData : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
-                // retrieve updatedOn and set it to the variable updatedOn
-                updatedOn = int.Parse(snapshot.Value.ToString());
+                // retrieve updatedOn and save the timestamp in an int variable
+                int tempUpdatedOn = int.Parse(snapshot.Value.ToString());
+
+                // converting the timestamp into date time
+                var localDateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(tempUpdatedOn).DateTime.ToLocalTime();
+                // convert result into string
+                string tempDateTime = localDateTimeOffset.ToString();
+                // save final result into updatedOn
+                updatedOn = tempDateTime;
             }
         });
     }

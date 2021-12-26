@@ -38,9 +38,7 @@ public class SideTabGrp : MonoBehaviour
                 //check if the index is eqal to the particular 
                 if (i == index && tabButtons[i])
                 {
-                    objectToswap[i].SetActive(true);
-
-                    /*if (index == 1)
+                    if (index == 1)
                     {
                         linkData.GetComponent<LinkData>().Profile();
                     }
@@ -48,8 +46,9 @@ public class SideTabGrp : MonoBehaviour
                     if (index == 3)
                     {
                         linkData.GetComponent<LinkData>().Leaderboard();
-                    }*/
+                    }
 
+                    objectToswap[i].SetActive(true);
                 }
                 else
                 {
