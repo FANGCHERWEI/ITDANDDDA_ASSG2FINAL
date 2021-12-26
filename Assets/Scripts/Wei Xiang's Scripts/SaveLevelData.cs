@@ -11,7 +11,6 @@ public class SaveLevelData : MonoBehaviour
     // initialise firebase auth
     Firebase.Auth.FirebaseAuth auth;
     public DatabaseReference dbReference;
-    public TaskManager taskManager;
 
     public string userID;
     public string username;
