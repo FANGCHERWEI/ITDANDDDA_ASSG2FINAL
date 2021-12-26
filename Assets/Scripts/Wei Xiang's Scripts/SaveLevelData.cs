@@ -467,6 +467,7 @@ public class SaveLevelData : MonoBehaviour
     // get the leaderboard from the database
     public void GetLeaderboard()
     {
+        // clear all the lists to start getting data
         leaderboardByUserID.Clear();
         leaderboardByAverageHighScore.Clear();
         leaderboardByUsername.Clear();
@@ -489,6 +490,7 @@ public class SaveLevelData : MonoBehaviour
                 {
                     foreach (var child in snapshot.Children)
                     {
+                        // assign the variables to the ones that are in the database
                         string id = child.Key;
                         leaderboardByUserID.Add(id);
 
@@ -503,6 +505,7 @@ public class SaveLevelData : MonoBehaviour
                         leaderboardByTotalTimePlayed.Add(float.Parse(playtime));
                     }
 
+                    // reverese the order of all the lists
                     leaderboardByUserID.Reverse();
                     leaderboardByAverageHighScore.Reverse();
                     leaderboardByUsername.Reverse();
@@ -511,6 +514,7 @@ public class SaveLevelData : MonoBehaviour
 
                     int listCount = leaderboardByUserID.Count;
 
+                    // code to run to get the top 3 players with the highest average score
                     if (leaderboardByUserID.Count > 3)
 
                         for (int i = 0; i < listCount - 3; i++)
@@ -546,6 +550,7 @@ public class SaveLevelData : MonoBehaviour
             {
                 DataSnapshot snapshot = task.Result;
                 string result = snapshot.Value.ToString();
+                // retrieve totalTimePlayed and set it to the variable totalTimePlayed
                 totalTimePlayed = float.Parse(result);
             }
         });
@@ -566,6 +571,7 @@ public class SaveLevelData : MonoBehaviour
             {
                 DataSnapshot snapshot = task.Result;
                 string result = snapshot.Value.ToString();
+                // retrieve userProfileRating and set it to the variable userProfileRating
                 userProfileRating = result;
             }
         });
@@ -605,7 +611,7 @@ public class SaveLevelData : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
-                // retrieve username and set it to the variable username
+                // retrieve updatedOn and set it to the variable updatedOn
                 updatedOn = int.Parse(snapshot.Value.ToString());
             }
         });
