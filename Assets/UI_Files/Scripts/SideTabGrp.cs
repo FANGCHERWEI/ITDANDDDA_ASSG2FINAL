@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SideTabGrp : MonoBehaviour
 {
+   
     //create a list of gameobject to store for the list of side tab button
     public List<TabButton> tabButtons;
     //the button is being selected
@@ -39,7 +40,7 @@ public class SideTabGrp : MonoBehaviour
                 {
                     objectToswap[i].SetActive(true);
 
-                    if (index == 1)
+                    /*if (index == 1)
                     {
                         linkData.GetComponent<LinkData>().Profile();
                     }
@@ -47,7 +48,7 @@ public class SideTabGrp : MonoBehaviour
                     if (index == 3)
                     {
                         linkData.GetComponent<LinkData>().Leaderboard();
-                    }
+                    }*/
 
                 }
                 else
