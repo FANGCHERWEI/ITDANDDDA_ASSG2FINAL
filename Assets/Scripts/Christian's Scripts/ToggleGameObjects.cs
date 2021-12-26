@@ -6,25 +6,37 @@ public class ToggleGameObjects : MonoBehaviour
 {
     public GameObject fire;
     public AudioSource fireSound;
+    public PlayerStatistics playerStats;
+    public TaskManager taskManager;
 
-    public GameObject task01CompletionCanvas;
+    public float cookingDuration;
+    public bool allowCooking;
 
-    public bool fireSoundIsPlaying;
+    // Below I made multiple taskCompletionCanvas variables instead of a taskCompletionList to make sure I will assign the right canvas in the right order.
+    // This is because assigning the taskCompletionCanvas GameObjects to a list may cause confusion of the order and naming.
+
+    public GameObject taskCompletionCanvasStage01;
+    public GameObject taskCompletionCanvasStage02;
+    public GameObject taskCompletionCanvasStage03;
 
     private void Awake()
     {
-        fireSoundIsPlaying = false;
+        allowCooking = false;
+
+        if (cookingDuration == 0)
+        {
+            cookingDuration = 5f;
+        }
     }
 
-    public void ToggleFireEffects()
+    public void ToggleCooker()
     {
-
-        if (!fireSoundIsPlaying)
+        if (!allowCooking)
         {
             fire.SetActive(true);
-
             fireSound.Play();
-            fireSoundIsPlaying = true;
+
+            allowCooking = true;
         }
 
         else
@@ -32,12 +44,20 @@ public class ToggleGameObjects : MonoBehaviour
             fire.SetActive(false);
 
             fireSound.Stop();
-            fireSoundIsPlaying = false;
+
+            allowCooking = false;
         }
     }
 
-    public void ToggleTask01CompletionCanvas()
+    public void DeactivateTaskCompletionCanvasStage01()
     {
-        task01CompletionCanvas.SetActive(false);
+        taskCompletionCanvasStage01.SetActive(false);
+        taskManager.gameStart = true;
+    }
+
+    public void DeactivateTaskCompletionCanvasStage02()
+    {
+        taskCompletionCanvasStage02.SetActive(false);
+        taskManager.gameStart = true;
     }
 }

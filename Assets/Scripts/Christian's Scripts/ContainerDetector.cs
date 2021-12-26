@@ -1,101 +1,224 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 // This script detects whether respective ingredients are collided with their containers
 // Containers can be any item that holds other items, such as bowls, plates, etc.
 
 public class ContainerDetector : MonoBehaviour
 {
-    public Dictionary<string, bool> ingredientsToDetect = new Dictionary<string, bool>();
-    public List<GameObject> ingredients = new List<GameObject>();
+    public Dictionary<string, GameObject> ingredientsToDetect = new Dictionary<string, GameObject>();
 
-    public bool containsAllIngredients;
+    private List<GameObject> ingredients = new List<GameObject>();
+    private List<string> ingredientNames = new List<string>(); // !!!!! List of all ingredient names. !!!!!
+    private List<string> missingIngredientsList = new List<string>(); // !!!!! List of missing ingredients from the current step. !!!!!
+
+    public bool allIngredientsContained;
+    public bool ingredientsMissing;
+
+    [SerializeField]
+    private bool allowCustomDebugFunctions;
+    public bool allowContainerMovement;
 
     private string collisionEnterObjName;
     private string collisionExitObjName;
+    private string initIngredientObjName;
+    private string currentStageOfProcess;
+
+    private GameObject collisionEnterObj;
+    private GameObject collisionExitObj;
+
+    // Variables for personally created components.
+    private IngredientInfo ingredientInfoComponent;
+    public PlayerStatistics playerStats;
+    public TaskManager taskManager;
+
+    public int allowedLvl;
+
+    // The below variables set default values for their respective variables
+    private bool defaultAllIngredientsContained = false;
+    private bool defaultIngredientsMissing = false;
+    private string defaultCurrentStageOfProcess = "Start";
+ 
+    
 
     private void Awake()
     {
         InitializeVariables();
     }
 
+    private void FixedUpdate()
+    {
+        if (playerStats.currentLvl == allowedLvl)
+        {
+            gameObject.GetComponent<Collider>().enabled = true;
+        }
+
+        else
+        {
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
+
+        currentStageOfProcess = taskManager.currentStageOfProcess;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        collisionEnterObjName = collision.gameObject.name;
+        if (collision.gameObject.GetComponent<IngredientInfo>() != null)
+        {
+            collisionEnterObj = collision.gameObject;
+            collisionEnterObjName = collisionEnterObj.GetComponent<IngredientInfo>().customName;
 
-        Debug.Log(gameObject.name + " ENTERED collision with: " + collisionEnterObjName);
-
-        CheckForIngredientCollision(collisionEnterObjName, collisionEnter: true);
+            CheckForIngredientCollision(collisionEnterObjName, collisionEnter: true);
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        collisionExitObjName = collision.gameObject.name;
+        if (collision.gameObject.GetComponent<IngredientInfo>() != null)
+        {
+            collisionExitObj = collision.gameObject;
+            collisionExitObjName = collisionExitObj.GetComponent<IngredientInfo>().customName;
 
-        Debug.Log(gameObject.name + " EXITED collision with: " + collisionExitObjName);
-
-        CheckForIngredientCollision(collisionExitObjName, collisionEnter: false);
+            CheckForIngredientCollision(collisionExitObjName, collisionEnter: false);
+        }
     }
 
     private void CheckForIngredientCollision(string collisionObjName, bool collisionEnter)
     {
         // This function checks whether an ingredient collided with the container instead of colliding with another object that has a collider
 
-        Debug.Log("Entered CheckForIngredientCollision() function in BowlDetector.cs script.");
-
         if (ingredientsToDetect.ContainsKey(collisionObjName))
         {
             if (collisionEnter)
+            {
                 // Checks whether the collision is a collisionEnter to determine whether ingredient is in the container instead of exiting the container
-                ingredientsToDetect[collisionObjName] = true;
+                ingredientsToDetect[collisionObjName].GetComponent<IngredientInfo>().isInContainer = true;
+            }
 
             else
+            {
                 // If collision is collisionExit, it means the ingredient left the container, therefore it is not in the container anymore
-                ingredientsToDetect[collisionObjName] = false;
+                ingredientsToDetect[collisionObjName].GetComponent<IngredientInfo>().isInContainer = false;
+            }
         }
 
-        containsAllIngredients = CheckIfContainsAllIngredients();
+        CheckIfContainsAllIngredients();
+    }
 
-        Debug.Log("Exited CheckForIngredientCollision() function in BowlDetector.cs script.");
+    private void CheckIfContainsAllIngredients()
+    {
+        // This function checks if all ingredients are in the container (E.g. bowl) to allow stirring/whisking to happen with the WhiskDetector.cs script.
+
+        ingredientsMissing = false;
+        missingIngredientsList.Clear();
+
+        foreach (KeyValuePair<string, GameObject> ingredientContained in ingredientsToDetect)
+        {
+            ingredientInfoComponent = ingredientContained.Value.GetComponent<IngredientInfo>();
+
+            if (!ingredientInfoComponent.isInContainer &&
+                ingredientInfoComponent.customTags.Contains(currentStageOfProcess))
+            {
+                missingIngredientsList.Add(ingredientInfoComponent.customName); // Used to display what necessary ingredients are missing for the step.
+                ingredientsMissing = true;
+            }
+        }
+
+        // Debug_CheckForMissingIngredients($"Current stage of process: {currentStageOfProcess}");
+        // Debug_IngredientsToDetectValueCheck("Check for ingredients");
+
+        if (ingredientsMissing)
+        {
+            allIngredientsContained = false;
+        }
+
+        else
+        {
+            allIngredientsContained = true;
+        }
+
     }
 
     private void InitializeVariables()
     {
-        // This function sets relevant values to variables that need them before the game begins
+        // This function sets relevant values to variables that need them before the game begins.
 
-        Debug.Log("Entered InitializeVariables() function in BowlDetector.cs script.");
+        allIngredientsContained = defaultAllIngredientsContained;
+        ingredientsMissing = defaultIngredientsMissing;
+        currentStageOfProcess = defaultCurrentStageOfProcess;
 
-        containsAllIngredients = false;
-
-        foreach (GameObject ingredient in ingredients) 
+        foreach (GameObject ingredient in ingredients)
         {
             // Gets all the names of the Ingredient GameObjects and sets all their status to false to indicate that they are not in the container.
-            ingredientsToDetect[ingredient.name] = false;
 
-            Debug.Log(ingredient.name + " status is: " + ingredientsToDetect[ingredient.name]);
+            try
+            {
+                initIngredientObjName = ingredient.GetComponent<IngredientInfo>().customName;
+
+                ingredientsToDetect[initIngredientObjName] = ingredient;
+                ingredientsToDetect[initIngredientObjName].GetComponent<IngredientInfo>().isInContainer = false;
+                ingredientNames.Add(initIngredientObjName);
+            }
+
+            catch (Exception exception)
+            {
+                Debug.LogException(exception, this);
+                Debug.Log("Check if all ingredients in ContainerDetector.cs script have IngredientInfo components");
+            }
         }
+    }
 
-        Debug.Log("Exited InitializeVariables() function in BowlDetector.cs script.");
+    private void Debug_IngredientsToDetectValueCheck(string identifier)
+    {
+        // Checks the values of the ingredientsToDetect variable
+        // Identifier string helps to identify which function call is running.
+
+        if (allowCustomDebugFunctions)
+        {
+            foreach (KeyValuePair<string, GameObject> anIngredient in ingredientsToDetect)
+            {
+                Debug.Log(anIngredient.Key + " is " + anIngredient.Value.GetComponent<IngredientInfo>().isInContainer + ". Identifier: " + identifier);
+            }
+        }
+    }
+
+    private void Debug_CheckForFunctionOperation(string currentFunctionName)
+    {
+        // Checks what function a piece of code is currently in so that other debug functions have context in the console.
+        // Use System.Reflection.MethodBase.GetCurrentMethod().Name as the argument in this function call.
+
+        Debug.Log("Currently in function " + currentFunctionName);
 
     }
 
-    private bool CheckIfContainsAllIngredients()
+    private void Debug_CheckForMissingIngredients(string identifier)
     {
-        // This function checks if all ingredients are in the container (E.g. bowl) to allow stirring/whisking to happen with the WhiskDetector.cs script.
+        // Checks whether any ingredients are missing and what exactly are the missing ingredients.
 
-        Debug.Log("Entered CheckIfContainsAllIngredients() function in BowlDetector.cs script.");
-
-        foreach (KeyValuePair<string, bool> ingredientContained in ingredientsToDetect)
+        if (missingIngredientsList.Count == 0)
         {
-            if (ingredientContained.Value == false)
-            {
-                Debug.Log("Exited CheckIfContainsAllIngredients() function in BowlDetector.cs script. Returned false.");
-
-                return false;
-            }
+            Debug.Log("No items are missing." + " identifier: " + identifier);
+            return;
         }
 
-        Debug.Log("Exited CheckIfContainsAllIngredients() function in BowlDetector.cs script. Returned true.");
-        return true;
+        foreach (string missingIngredient in missingIngredientsList)
+        {
+            Debug.Log("Missing Ingredient: " + missingIngredient + " identifier: " + identifier);
+        }
+    }
+
+    private void Debug_CheckIfLvlAllowed()
+    {
+        if (playerStats.currentLvl == allowedLvl)
+        {
+            Debug.Log("Current Lvl: " + playerStats.currentLvl + " Mesh: " + gameObject.name + " - Allowed");
+        }
+
+        else
+        {
+            Debug.Log("Current Lvl: " + playerStats.currentLvl + " Mesh: " + gameObject.name + " - Denied");
+        }
     }
 }

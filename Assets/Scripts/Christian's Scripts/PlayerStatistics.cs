@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class PlayerStatistics : MonoBehaviour
 {
-    public float maxPercentagePoints;
+    public float maxPercentagePointsLvl01;
+    public float maxPercentagePointsLvl02;
+    public float maxPercentagePointsLvl03;
+    public float avgPercentagePoints;
     public string grade;
 
-    private void Start()
+    public int currentLvl;
+
+    private void Awake()
     {
-        if (maxPercentagePoints <= 0f)
-            maxPercentagePoints = 100f;
+        InitializeVariables();
     }
 
     private void Update()
@@ -20,13 +24,29 @@ public class PlayerStatistics : MonoBehaviour
 
     private void CheckForGrade()
     {
-        if (maxPercentagePoints > 80)
+        avgPercentagePoints = (maxPercentagePointsLvl01 + maxPercentagePointsLvl02 + maxPercentagePointsLvl03) / 3;
+
+        if (avgPercentagePoints > 80)
             grade = "Excellent";
 
-        else if (maxPercentagePoints > 50)
+        else if (avgPercentagePoints > 50)
             grade = "Good";
 
         else
             grade = "Epic Fail";
+    }
+
+    private void InitializeVariables()
+    {
+        currentLvl = 1;
+
+        if (maxPercentagePointsLvl01 <= 0f)
+            maxPercentagePointsLvl01 = 100f;
+
+        if (maxPercentagePointsLvl02 <= 0f)
+            maxPercentagePointsLvl02 = 100f;
+
+        if (maxPercentagePointsLvl03 <= 0f)
+            maxPercentagePointsLvl03 = 100f;
     }
 }
