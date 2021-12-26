@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script manages the connection between different scripts.
+
 public class TaskManager : MonoBehaviour
 {
+    private List<string[]> allTaskNamesInOrder = new List<string[]>();
+
+    // Below variables contain coder's custom components.
     public PlayerStatistics playerStats;
     public ToggleGameObjects toggleGameObjects;
 
     // Below variables will be used to update SensorCollisionDetector.cs script variables.
-    public bool allowSensorCollisionDetectorOperation;
+    public bool allowSensorCollisionDetectorOperation; // Allows or prevents the churning activity from occurring, thus allowing more control over when the SensorCollisionDetector.cs script can run. The same logic applies to other allowTaskOperation variables.
     public int numTimesChurningCompleted;
 
     // Below variables will be used to update CookingDetector.cs script variables.
@@ -18,27 +23,13 @@ public class TaskManager : MonoBehaviour
     public bool gameStart;
     public string currentStageOfProcess;
 
+    // The below variables contain the steps for each task in order and are used to identify what order script(s) will run in each stage and what script(s) is/are currently running.
     private string[] stage01TaskNamesInOrder = { "Churning" };
     private string[] stage02TaskNamesInOrder = { "Churning", "Cooking", "Churning", "Cooking" };
 
-    [SerializeField] private List<string[]> allTaskNamesInOrder = new List<string[]>();
-
-
     private void Awake()
     {
-        gameStart = true;
-        // CountdownTimer.timerIsRunning = true;
-        currentStageOfProcess = stage01TaskNamesInOrder[0];
-
-        allTaskNamesInOrder.Add(stage01TaskNamesInOrder);
-        allTaskNamesInOrder.Add(stage02TaskNamesInOrder);
-
-        numTimesChurningCompleted = 0;
-
-        allowSensorCollisionDetectorOperation = false;
-        allowCookingDetectorOperation = false;
-
-        FindStep01();
+        
     }
 
     private void Update()
@@ -53,6 +44,7 @@ public class TaskManager : MonoBehaviour
 
         else
         {
+            // This else statement resets the value of the countdown timer so that it will restart when changing levels.
             CountdownTimer.timeRemaining = 1801;
             CountdownTimer.timerIsRunning = false;
         }
@@ -62,19 +54,19 @@ public class TaskManager : MonoBehaviour
     {
         // Shows the menu after the player completes a task
 
-        gameStart = false;
+        gameStart = false; // Stops the main timer from running.
 
         if (currentLvl == 1)
         {
-            toggleGameObjects.taskCompletionCanvasStage01.SetActive(true);
+            toggleGameObjects.taskCompletedCanvasStage01.SetActive(true);
         }
 
         if (currentLvl == 2)
         {
-            toggleGameObjects.taskCompletionCanvasStage02.SetActive(true);
+            toggleGameObjects.taskCompletedCanvasStage02.SetActive(true);
         }
 
-        currentStageOfProcess = allTaskNamesInOrder[playerStats.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement is put before increasing the current level.
+        currentStageOfProcess = allTaskNamesInOrder[playerStats.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.
         // playerStats.currentLvl += 1;
 
         FindStep01();
@@ -82,10 +74,9 @@ public class TaskManager : MonoBehaviour
 
     public void ChurningMotionCompletedBehavior(int timesCompleted)
     {
-        Debug.Log("Current Level: " + playerStats.currentLvl);
-        Debug.Log("Num Times Churning Completed: " + numTimesChurningCompleted);
+        // The behavior of the game when a churning (e.g. whisking, stirring, etc.) task is completed.
 
-        allowSensorCollisionDetectorOperation = false;
+        allowSensorCollisionDetectorOperation = false; 
         numTimesChurningCompleted = timesCompleted;
 
         if (playerStats.currentLvl == 1)
@@ -113,6 +104,8 @@ public class TaskManager : MonoBehaviour
 
     public void CookingCompletedBehavior(int timesCompleted)
     {
+        // This function contains the behavior for the game when a cooking task is completed.
+
         allowCookingDetectorOperation = false;
         numTimesCookingCompleted = timesCompleted;
 
@@ -160,5 +153,24 @@ public class TaskManager : MonoBehaviour
     {
         numTimesChurningCompleted = 0;
         numTimesCookingCompleted = 0;
+    }
+
+    private void InitializeVariables()
+    {
+        // Assigns values to variables so that they are not empty and have the necessary values for the script to run.
+
+        gameStart = true; // Allows the main timer to run.
+
+        currentStageOfProcess = stage01TaskNamesInOrder[0];
+
+        allTaskNamesInOrder.Add(stage01TaskNamesInOrder);
+        allTaskNamesInOrder.Add(stage02TaskNamesInOrder);
+
+        numTimesChurningCompleted = 0;
+
+        allowSensorCollisionDetectorOperation = false;
+        allowCookingDetectorOperation = false;
+
+        FindStep01();
     }
 }

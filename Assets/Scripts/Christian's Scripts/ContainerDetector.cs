@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-// This script detects whether respective ingredients are collided with their containers
-// Containers can be any item that holds other items, such as bowls, plates, etc.
+/*
+ * Coder's Reference:
+ * !!!!! means this is an important variable for UI
+ * This script detects whether respective ingredients are collided with their containers
+ * Containers can be any item that holds other items, such as bowls, plates, etc.
+*/
 
 public class ContainerDetector : MonoBehaviour
 {
@@ -14,11 +18,17 @@ public class ContainerDetector : MonoBehaviour
     private List<string> ingredientNames = new List<string>(); // !!!!! List of all ingredient names. !!!!!
     private List<string> missingIngredientsList = new List<string>(); // !!!!! List of missing ingredients from the current step. !!!!!
 
+    // Below variables contain coder's custom components.
+    private IngredientInfo ingredientInfoComponent;
+    public PlayerStatistics playerStats;
+    public TaskManager taskManager;
+
     public bool allIngredientsContained;
     public bool ingredientsMissing;
 
     [SerializeField]
     private bool allowCustomDebugFunctions;
+
     public bool allowContainerMovement;
 
     private string collisionEnterObjName;
@@ -29,19 +39,13 @@ public class ContainerDetector : MonoBehaviour
     private GameObject collisionEnterObj;
     private GameObject collisionExitObj;
 
-    // Variables for personally created components.
-    private IngredientInfo ingredientInfoComponent;
-    public PlayerStatistics playerStats;
-    public TaskManager taskManager;
 
-    public int allowedLvl;
+    public int allowedLvl; // What level this script can run in. It is different depending on which game object this script is located in.
 
     // The below variables set default values for their respective variables
     private bool defaultAllIngredientsContained = false;
     private bool defaultIngredientsMissing = false;
     private string defaultCurrentStageOfProcess = "Start";
- 
-    
 
     private void Awake()
     {
@@ -87,7 +91,7 @@ public class ContainerDetector : MonoBehaviour
 
     private void CheckForIngredientCollision(string collisionObjName, bool collisionEnter)
     {
-        // This function checks whether an ingredient collided with the container instead of colliding with another object that has a collider
+        // This function checks whether the collided object is an ingredient.
 
         if (ingredientsToDetect.ContainsKey(collisionObjName))
         {
@@ -125,9 +129,6 @@ public class ContainerDetector : MonoBehaviour
                 ingredientsMissing = true;
             }
         }
-
-        // Debug_CheckForMissingIngredients($"Current stage of process: {currentStageOfProcess}");
-        // Debug_IngredientsToDetectValueCheck("Check for ingredients");
 
         if (ingredientsMissing)
         {

@@ -8,8 +8,10 @@ Coder's Reference:
 CollisionLayer 6 == IngredientBody
 CollisionLayer 7 == IngredientParticle
 */
+
 public class IngredientDropSensor : MonoBehaviour
 {
+    // Below variable contains coder's custom components.
     [SerializeField]
     private PlayerStatistics playerStats;
 
@@ -18,7 +20,7 @@ public class IngredientDropSensor : MonoBehaviour
 
     private bool objectCollisionStatus;
 
-    // The below variables set default values for their respective variables.
+    // The below variables set the default values for their respective variables.
     private float defaultIngredientDropPenalty = 4;
     private float defaultCollisionStayTime = 0.3f;
     private bool defaultObjectCollisionStatus = false;
@@ -52,29 +54,18 @@ public class IngredientDropSensor : MonoBehaviour
         // The bottom if-else statement makes sure that the player loses points only if INGREDIENTS are dropped, not any other object.
         if (playerStats.currentLvl == 1)
         {
-            playerStats.maxPercentagePointsLvl01 -= ingredientDropPenalty; // Reduces the points for level 1.
+            playerStats.PercentagePointsLvl01 -= ingredientDropPenalty; // Reduces the points for level 1.
         }
 
         else if (playerStats.currentLvl == 2)
         {
-            playerStats.maxPercentagePointsLvl02 -= ingredientDropPenalty; // Reduces the points for level 2.
+            playerStats.PercentagePointsLvl02 -= ingredientDropPenalty; // Reduces the points for level 2.
         }
     }
 
     IEnumerator CollisionTimeElapsed(int collisionLayer)
     {
-        /* 
-        Waits for a certain amount of time before acknowledging that the dropped object is dropped before doing calculations. 
-        Necessary to prevent miscalculations of object collision. One example is an object colliding with a collider that is NEAR a table or floor but not AT those locations.
-        I.e. There is a container with a collider (such as a pan or bowl) right on top of an IngredientDropSensor's object with a collider (such as a floor).
-
-        When the above example occurs and an ingredient falls to the container, OnCollisionEnter detects the ingredient as colliding with with the container collider AND the floor collider.
-
-        However, once the ingredient stopped moving, OnCollisionExit instantly detects the ingredient as leaving the collider and the collision system detects the ingredient 
-        as in contact with only the container. This causes the user to lose points even if the ingredient ended up in the bowl. To overcome this, 
-        I set a timer to detect how long an object is in contact with IngredientDropSensor's object's collider. If the object is in contact for more than a certain period of time, 
-        but not too long that the user can cheat by having quick reflexes, then the object has actually dropped.
-        */
+        // Waits for a certain amount of time before acknowledging that the dropped object is  on the ground/table dropped before doing calculations
 
         yield return new WaitForSeconds(collisionStayTime);
 
@@ -86,6 +77,8 @@ public class IngredientDropSensor : MonoBehaviour
 
     private void InitializeVariables()
     {
+        // Assigns values to variables so that they are not empty and have the necessary values for the script to run.
+
         if (ingredientDropPenalty == 0)
         {
             // This if statement makes sure there is always a penalty even when ingredientBodyDropPenalty is not modified in the inspector.

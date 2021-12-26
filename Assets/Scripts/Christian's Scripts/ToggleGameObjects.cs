@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script contains the functions that buttons will use.
+
 public class ToggleGameObjects : MonoBehaviour
 {
     public GameObject fire;
+    public GameObject taskCompletedCanvasStage01;
+    public GameObject taskCompletedCanvasStage02;
+
     public AudioSource fireSound;
+
+    // Below variables contain coder's custom components.
     public PlayerStatistics playerStats;
     public TaskManager taskManager;
 
     public float cookingDuration;
-    public bool allowCooking;
-
-    // Below I made multiple taskCompletionCanvas variables instead of a taskCompletionList to make sure I will assign the right canvas in the right order.
-    // This is because assigning the taskCompletionCanvas GameObjects to a list may cause confusion of the order and naming.
-
-    public GameObject taskCompletionCanvasStage01;
-    public GameObject taskCompletionCanvasStage02;
+    public bool allowCooking; 
 
     private void Awake()
     {
@@ -48,20 +49,24 @@ public class ToggleGameObjects : MonoBehaviour
         }
     }
 
-    public void StartLvl01()
+    public void StartCanvasButton()
     {
         playerStats.currentLvl = 1;
     }
 
     public void DeactivateTaskCompletionCanvasStage01()
     {
-        playerStats.currentLvl = 2;
-        taskCompletionCanvasStage01.SetActive(false);
-        taskManager.gameStart = true;
+        // Deactivates the stage 1 task completion canvas.
+
+        playerStats.currentLvl = 2; // Changes the current level to 2.
+        taskCompletedCanvasStage01.SetActive(false);
+        taskManager.gameStart = true; // Allows the timer to start running again.
     }
 
     public void DeactivateTaskCompletionCanvasStage02()
     {
-        taskCompletionCanvasStage02.SetActive(false);
+        // Deactivates the stage 2 task completion canvas.
+
+        taskCompletedCanvasStage02.SetActive(false);
     }
 }

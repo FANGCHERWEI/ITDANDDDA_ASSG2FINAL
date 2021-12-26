@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// For coder's reference:
-// Layer 6 == "IngredientBody"
-// Layer 7 == "IngredientParticle"
-// Layer 8 == "LiquidContainer"
-// Layer 9 == "IngredientsContainer"
-// !!!!! == For UI developers
+/* For coder's reference:
+ * Layer 6 == "IngredientBody"
+ * Layer 7 == "IngredientParticle"
+ * Layer 8 == "LiquidContainer"
+ * Layer 9 == "IngredientsContainer"
+ * !!!!! == Important variable for UI  */
 
 public class CookingDetector : MonoBehaviour
 {

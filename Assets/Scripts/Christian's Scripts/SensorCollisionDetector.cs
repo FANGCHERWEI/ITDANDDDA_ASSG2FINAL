@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// TODO: Deal with super high speeds.
-// TODO: Turn on gravity on the whisker after testing
-
 public class SensorCollisionDetector : MonoBehaviour
 {
-    // "sensors" used to be called "whiskerSensors" as this code was only used for whisking originally.
-    // However, they are now used for other churning actions such as stirring. The renamed variables are used to generalize the code more.
+    [SerializeField] 
+    private string collidedObjEnterName;
 
-    [SerializeField] private string collidedObjEnterName;
-    [SerializeField] private int sensorsWithRequiredNumCollisions; // Keeps track of the sensors that detect circular movement such as whisking and stirring.
-                                                                   // Prevents player from cheating by making sure they collide with all the sensors, which ensures they move in a circular motion.
+    [SerializeField] 
+    private int sensorsWithRequiredNumCollisions; 
+    /* sensorsWithRequiredNumCollisions keeps track of the sensors that detect churning motions such as whisking and stirring.
+     * Prevents player from cheating by taking into account all the sensors, preventing users from finishing the task by hitting only one sensor consecutively. */
 
     public Dictionary<string, int> timesEachSensorActivated = new Dictionary<string, int>(); // Contains how many times a sensor has been collided with.
     public List<GameObject> sensors = new List<GameObject>();
 
     public int numTimesTaskCompleted;
-    public int requiredNumChurns; // The number of times a player has to complete a churning motion. Used for movements such as whisking and stirring.
+    public int requiredNumChurns; // The number of times a player has to complete a churning motion.
     public bool churningMotionTaskCompleted;
     public bool showChurningTool;
     public float delayBeforeLvlComplete;
@@ -27,10 +25,12 @@ public class SensorCollisionDetector : MonoBehaviour
     
     private bool allIngredientsContained;
     private int allowedLvl;
-    
+
+    // Below variables contain coder's custom components.
     public ContainerDetector containerDetector;
     public PlayerStatistics playerStats;
     public TaskManager taskManager;
+
     public GameObject churningTool; // E.g. Whisks/equipment used for churning.
 
     private void Start()

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script controls the spawning and characteristics of liquid particles.
+
 public class LiquidParticleController : MonoBehaviour
 {
     public Transform spawnLocTransform;
@@ -42,6 +44,8 @@ public class LiquidParticleController : MonoBehaviour
         {
             if (raycastHit.collider.gameObject.layer == 9)
             {
+                // This if statement makes it so that fluid objects will only spawn when there is a container right below it.
+
                 if (allowSpawning)
                 {
                     StartCoroutine(Delay());
@@ -64,6 +68,8 @@ public class LiquidParticleController : MonoBehaviour
 
     IEnumerator Delay()
     {
+        // This function waits for a while before spawning a fluid obj to ensure it does not collide with the exterior side or edge of containers and just bounce off.
+
         yield return new WaitForSeconds(delay);
 
         spawnLocActual = spawnLocTransform.position;

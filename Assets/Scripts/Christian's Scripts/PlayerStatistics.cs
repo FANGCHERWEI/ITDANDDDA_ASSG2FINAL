@@ -6,12 +6,20 @@ using UnityEngine;
 
 public class PlayerStatistics : MonoBehaviour
 {
-    public float maxPercentagePointsLvl01;
-    public float maxPercentagePointsLvl02;
-    public float avgPercentagePoints;
-    public string grade;
+    // Below variables contain the points that the user will have for each level respectively.
+    public float PercentagePointsLvl01;
+    public float PercentagePointsLvl02;
+    public float avgPercentagePoints; // Average percentage points over all levels.
 
-    public int currentLvl;
+    // Below array contains the grade names in order from highest to lowest grade.
+    public string[] gradeNames;
+
+    public string grade; // Text grade of a student.
+    public int currentLvl; // Current level the student is in.
+
+    // The below variables set the default values for their respective variables.
+    private float startingPercentagePointsLvl01 = 100f;
+    private float startingPercentagePointsLvl02 = 100f;
 
     private void Awake()
     {
@@ -25,7 +33,7 @@ public class PlayerStatistics : MonoBehaviour
 
     private void CheckForGrade()
     {
-        avgPercentagePoints = (maxPercentagePointsLvl01 + maxPercentagePointsLvl02) / 2;
+        avgPercentagePoints = (PercentagePointsLvl01 + PercentagePointsLvl02) / 2;
 
         if (avgPercentagePoints > 80)
         {
@@ -45,16 +53,19 @@ public class PlayerStatistics : MonoBehaviour
 
     private void InitializeVariables()
     {
+        // Assigns values to variables so that they are not empty and have the necessary values for the script to run.
+
         currentLvl = 1; // For testing only!!! The current level should only be based on buttons presses or UI elements.
 
-        if (maxPercentagePointsLvl01 <= 0f)
+        // Bottom two if statements make sure the player always begins with points to lose.
+        if (PercentagePointsLvl01 <= 0f)
         {
-            maxPercentagePointsLvl01 = 100f;
+            PercentagePointsLvl01 = startingPercentagePointsLvl01;
         }
 
-        if (maxPercentagePointsLvl02 <= 0f)
+        if (PercentagePointsLvl02 <= 0f)
         {
-            maxPercentagePointsLvl02 = 100f;
+            PercentagePointsLvl02 = startingPercentagePointsLvl02;
         }
     }
 }

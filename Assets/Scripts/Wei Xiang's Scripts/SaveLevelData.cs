@@ -141,7 +141,7 @@ public class SaveLevelData : MonoBehaviour
             if (playerStatistics.currentLvl == 1)
             {
                 // retrieve the score for level 1
-                currentLevel1Score = playerStatistics.maxPercentagePointsLvl01;
+                currentLevel1Score = playerStatistics.PercentagePointsLvl01;
                 // save the time taken to complete level 1 into timePlayedLevel1
                 timePlayedLevel1 = CountdownTimer.timeElapsed;
                 // convert the time that is in float to minutes and seconds
@@ -151,7 +151,7 @@ public class SaveLevelData : MonoBehaviour
             else if (playerStatistics.currentLvl == 2)
             {
                 // retrieve the score for level 2
-                currentLevel2Score = playerStatistics.maxPercentagePointsLvl02;
+                currentLevel2Score = playerStatistics.PercentagePointsLvl02;
                 // save the time taken to complete level 2
                 timePlayedLevel2 = CountdownTimer.timeElapsed;
                 // convert the time taken to complete level 2 into minutes and seconds
