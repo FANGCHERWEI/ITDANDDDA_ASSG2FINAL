@@ -20,7 +20,6 @@ public class TaskManager : MonoBehaviour
 
     private string[] stage01TaskNamesInOrder = { "Churning" };
     private string[] stage02TaskNamesInOrder = { "Churning", "Cooking", "Churning", "Cooking" };
-    private string[] stage03TaskNamesInOrder = { "Churning", "Simmering", "Seasoning", "Churning", "Seasoning" };
 
     [SerializeField] private List<string[]> allTaskNamesInOrder = new List<string[]>();
 
@@ -28,11 +27,11 @@ public class TaskManager : MonoBehaviour
     private void Awake()
     {
         gameStart = true;
+        // CountdownTimer.timerIsRunning = true;
         currentStageOfProcess = stage01TaskNamesInOrder[0];
 
         allTaskNamesInOrder.Add(stage01TaskNamesInOrder);
         allTaskNamesInOrder.Add(stage02TaskNamesInOrder);
-        allTaskNamesInOrder.Add(stage03TaskNamesInOrder);
 
         numTimesChurningCompleted = 0;
 
@@ -44,7 +43,19 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (gameStart)
+        {
+            CountdownTimer.timerIsRunning = true;
+            SaveLevelData.userIDRetrieved = false;
+            SaveLevelData.getUsernameFlag = true;
+            SaveLevelData.highScoresRetrived = false;
+        }
+
+        else
+        {
+            CountdownTimer.timeRemaining = 1801;
+            CountdownTimer.timerIsRunning = false;
+        }
     }
 
     private void ShowTaskEndMenu(int currentLvl)
@@ -54,16 +65,17 @@ public class TaskManager : MonoBehaviour
         gameStart = false;
 
         if (currentLvl == 1)
+        {
             toggleGameObjects.taskCompletionCanvasStage01.SetActive(true);
+        }
 
         if (currentLvl == 2)
+        {
             toggleGameObjects.taskCompletionCanvasStage02.SetActive(true);
+        }
 
-        if (currentLvl == 3)
-            toggleGameObjects.taskCompletionCanvasStage03.SetActive(true);
-
-        currentStageOfProcess = allTaskNamesInOrder[playerStats.currentLvl][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement is put before increasing the current level.
-        playerStats.currentLvl += 1;
+        currentStageOfProcess = allTaskNamesInOrder[playerStats.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement is put before increasing the current level.
+        // playerStats.currentLvl += 1;
 
         FindStep01();
     }

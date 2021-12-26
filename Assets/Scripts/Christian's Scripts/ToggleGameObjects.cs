@@ -17,7 +17,6 @@ public class ToggleGameObjects : MonoBehaviour
 
     public GameObject taskCompletionCanvasStage01;
     public GameObject taskCompletionCanvasStage02;
-    public GameObject taskCompletionCanvasStage03;
 
     private void Awake()
     {
@@ -49,8 +48,14 @@ public class ToggleGameObjects : MonoBehaviour
         }
     }
 
+    public void StartLvl01()
+    {
+        playerStats.currentLvl = 1;
+    }
+
     public void DeactivateTaskCompletionCanvasStage01()
     {
+        playerStats.currentLvl = 2;
         taskCompletionCanvasStage01.SetActive(false);
         taskManager.gameStart = true;
     }
@@ -58,6 +63,5 @@ public class ToggleGameObjects : MonoBehaviour
     public void DeactivateTaskCompletionCanvasStage02()
     {
         taskCompletionCanvasStage02.SetActive(false);
-        taskManager.gameStart = true;
     }
 }

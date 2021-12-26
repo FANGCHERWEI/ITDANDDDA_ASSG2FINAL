@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float timeRemaining;
+    public static float timeRemaining;
     public static float timeElapsed;
     public static bool timerIsRunning = false;
     public GameObject timeUI;
     public string timeDisplay;
+    public TaskManager taskManager;
 
     // Start is called before the first frame update
     void Start()
