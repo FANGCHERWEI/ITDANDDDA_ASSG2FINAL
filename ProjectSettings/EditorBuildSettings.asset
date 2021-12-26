@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI_Game.unity
     guid: 0b32138ddedf5554985badc6f767387f
+  - enabled: 1
+    path: Assets/Scenes/Christian's Scene.unity
+    guid: f46800251a5e4ae4eab2b753206f813d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d5fa4e7f44894a64ba89ed86a53d54dd, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d138902d13650b94095095dea6c6d2e8, type: 2}
