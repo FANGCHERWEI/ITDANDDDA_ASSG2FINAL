@@ -11,6 +11,7 @@ public class TaskManager : MonoBehaviour
     // Below variables contain coder's custom components.
     public PlayerStatistics playerStats;
     public ToggleGameObjects toggleGameObjects;
+    public LevelCompleted levelCompleted;
 
     // Below variables will be used to update SensorCollisionDetector.cs script variables.
     public bool allowSensorCollisionDetectorOperation; // Allows or prevents the churning activity from occurring, thus allowing more control over when the SensorCollisionDetector.cs script can run. The same logic applies to other allowTaskOperation variables.
@@ -24,6 +25,9 @@ public class TaskManager : MonoBehaviour
     public string currentStageOfProcess;
     public bool thing = true;
     public bool thing2 = true;
+
+    public static bool completedLevel01 = false;
+    public static bool completedLevel02 = false;
 
     // The below variables contain the steps for each task in order and are used to identify what order script(s) will run in each stage and what script(s) is/are currently running.
     private string[] stage01TaskNamesInOrder = { "Churning" };
@@ -65,12 +69,16 @@ public class TaskManager : MonoBehaviour
 
         if (currentLvl == 1)
         {
-            toggleGameObjects.taskCompletedCanvasStage01.SetActive(true);
+            // toggleGameObjects.taskCompletedCanvasStage01.SetActive(true);
+
+            levelCompleted.LevelCompletedData();
         }
 
         if (currentLvl == 2)
         {
-            toggleGameObjects.taskCompletedCanvasStage02.SetActive(true);
+            // toggleGameObjects.taskCompletedCanvasStage02.SetActive(true);
+
+            levelCompleted.LevelCompletedData();
         }
 
         currentStageOfProcess = allTaskNamesInOrder[PlayerStatistics.currentLvl][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.

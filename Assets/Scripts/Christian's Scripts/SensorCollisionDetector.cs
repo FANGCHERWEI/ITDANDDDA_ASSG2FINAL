@@ -46,20 +46,24 @@ public class SensorCollisionDetector : MonoBehaviour
             //           ", allIngredientsContained: " + allIngredientsContained);
 
             GetComponent<Collider>().enabled = true;
-            GetComponent<MeshRenderer>().enabled = true;
+            // GetComponent<MeshRenderer>().enabled = true;
+
+            transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = true;
         }
 
         else if ((!taskManager.allowSensorCollisionDetectorOperation || !allIngredientsContained) && allowedLvl == PlayerStatistics.currentLvl)
         {
-             // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
-             //           ", allIngredientsContained: " + allIngredientsContained);
+            // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
+            //           ", allIngredientsContained: " + allIngredientsContained);
 
             GetComponent<Collider>().enabled = false;
+            // transform.GetChild(0).gameObject.GetComponent<Collider>().enabled = false;
         }
 
         else
         {
             GetComponent<Collider>().enabled = false;
+            // transform.GetChild(0).gameObject.GetComponent<Collider>().enabled = false;
         }
     }
 
@@ -98,7 +102,8 @@ public class SensorCollisionDetector : MonoBehaviour
         {
             Debug.Log("Churning motion task completed.");
 
-            GetComponent<MeshRenderer>().enabled = false;
+            // GetComponent<MeshRenderer>().enabled = false;
+            transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = false;
 
             numTimesTaskCompleted += 1;
             taskManager.numTimesChurningCompleted = numTimesTaskCompleted;

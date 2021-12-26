@@ -7,14 +7,17 @@ public class CountdownTimer : MonoBehaviour
 {
     public static float timeRemaining;
     public static float timeElapsed;
-    public static bool timerIsRunning = false;
+    public static bool timerIsRunning = true;
     public GameObject timeUI;
     public string timeDisplay;
+    public GameObject canvasLvl01Failed;
+    public GameObject canvasLvl02Failed;
 
     // Start is called before the first frame update
     void Start()
     {
         // set the timer to start running
+        timeRemaining = 1800;
         timerIsRunning = true;
     }
 
@@ -34,9 +37,19 @@ public class CountdownTimer : MonoBehaviour
             // if timer is running but time remaining is less than or equals to 0, set timer running to false and reset time remaining to 30 minutes
             else
             {
-                timeRemaining = 1800;
                 timerIsRunning = false;
+
+                if (PlayerStatistics.currentLvl == 1)
+                {
+                    canvasLvl01Failed.SetActive(true);
+                }
+
+                if (PlayerStatistics.currentLvl == 2) 
+                {
+                    canvasLvl02Failed.SetActive(true);
+                }
                 // do stuff when player fails
+                timeRemaining = 1800;
             }
         }
 
