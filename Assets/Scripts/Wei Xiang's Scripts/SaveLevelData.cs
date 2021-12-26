@@ -12,7 +12,6 @@ public class SaveLevelData : MonoBehaviour
     Firebase.Auth.FirebaseAuth auth;
     public DatabaseReference dbReference;
     public TaskManager taskManager;
-    public PlayerStatistics playerStatistics;
 
     public string userID;
     public string username;
@@ -82,7 +81,7 @@ public class SaveLevelData : MonoBehaviour
         // get the boolean from leaderboard ui thing (not finalised)
 
         // if user is logged in and userID has not been retrieved, get the userID from another script and set userID retrieved to be true
-        if ((Authentication.loggedIn || taskManager.gameStart) && !userIDRetrieved)
+        if ((Authentication.loggedIn || TaskManager.gameStart) && !userIDRetrieved)
         {
             userID = Authentication.userID;
             // get the time played data
@@ -141,7 +140,7 @@ public class SaveLevelData : MonoBehaviour
             if (PlayerStatistics.currentLvl == 1)
             {
                 // retrieve the score for level 1
-                currentLevel1Score = playerStatistics.PercentagePointsLvl01;
+                currentLevel1Score = PlayerStatistics.PercentagePointsLvl01;
                 // save the time taken to complete level 1 into timePlayedLevel1
                 timePlayedLevel1 = CountdownTimer.timeElapsed;
                 // convert the time that is in float to minutes and seconds
@@ -151,7 +150,7 @@ public class SaveLevelData : MonoBehaviour
             else if (PlayerStatistics.currentLvl == 2)
             {
                 // retrieve the score for level 2
-                currentLevel2Score = playerStatistics.PercentagePointsLvl02;
+                currentLevel2Score = PlayerStatistics.PercentagePointsLvl02;
                 // save the time taken to complete level 2
                 timePlayedLevel2 = CountdownTimer.timeElapsed;
                 // convert the time taken to complete level 2 into minutes and seconds

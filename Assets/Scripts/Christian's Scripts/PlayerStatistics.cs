@@ -7,9 +7,9 @@ using UnityEngine;
 public class PlayerStatistics : MonoBehaviour
 {
     // Below variables contain the points that the user will have for each level respectively.
-    public float PercentagePointsLvl01;
-    public float PercentagePointsLvl02;
-    public float avgPercentagePoints; // Average percentage points over all levels.
+    public static float PercentagePointsLvl01;
+    public static float PercentagePointsLvl02;
+    public static float avgPercentagePoints; // Average percentage points over all levels.
 
     // Below array contains the grade names in order from highest to lowest grade.
     public string[] gradeNames;

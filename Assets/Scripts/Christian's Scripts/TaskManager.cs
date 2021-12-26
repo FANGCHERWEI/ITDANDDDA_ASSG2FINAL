@@ -20,7 +20,7 @@ public class TaskManager : MonoBehaviour
     public bool allowCookingDetectorOperation;
     public int numTimesCookingCompleted;
 
-    public bool gameStart;
+    public static bool gameStart;
     public string currentStageOfProcess;
 
     // The below variables contain the steps for each task in order and are used to identify what order script(s) will run in each stage and what script(s) is/are currently running.
