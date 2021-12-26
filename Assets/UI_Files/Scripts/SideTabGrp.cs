@@ -11,6 +11,7 @@ public class SideTabGrp : MonoBehaviour
     public TabButton selectedTab;
     //list of gameobject going to swap 
     public List<GameObject> objectToswap;
+    public GameObject linkData;
 
     //this method could take in type of button
 
@@ -37,6 +38,17 @@ public class SideTabGrp : MonoBehaviour
                 if (i == index && tabButtons[i])
                 {
                     objectToswap[i].SetActive(true);
+
+                    if (index == 1)
+                    {
+                        linkData.GetComponent<LinkData>().Profile();
+                    }
+
+                    if (index == 3)
+                    {
+                        linkData.GetComponent<LinkData>().Leaderboard();
+                    }
+
                 }
                 else
                 {

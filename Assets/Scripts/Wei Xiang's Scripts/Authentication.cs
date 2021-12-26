@@ -14,6 +14,9 @@ public class Authentication : MonoBehaviour
     Firebase.Auth.FirebaseAuth auth;
     public DatabaseReference dbReference;
 
+    public GameObject loginPage;
+    public GameObject gamePage;
+
     public static bool firstTimeLogin = false;
     public static bool loggedIn = false;
 
@@ -70,8 +73,8 @@ public class Authentication : MonoBehaviour
         // if login is successful, bring user to home menu
         if (loggedIn)
         {
-            // do stuff here after logging in
-            //SceneManager.LoadScene("gamemenu_tes"); // for testing
+            loginPage.SetActive(false);
+            gamePage.SetActive(true);
         }
     }
 
