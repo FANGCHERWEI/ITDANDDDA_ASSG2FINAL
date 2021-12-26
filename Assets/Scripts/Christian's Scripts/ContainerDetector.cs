@@ -14,7 +14,7 @@ public class ContainerDetector : MonoBehaviour
 {
     public Dictionary<string, GameObject> ingredientsToDetect = new Dictionary<string, GameObject>();
 
-    private List<GameObject> ingredients = new List<GameObject>();
+    public List<GameObject> ingredients = new List<GameObject>();
     private List<string> ingredientNames = new List<string>(); // !!!!! List of all ingredient names. !!!!!
     private List<string> missingIngredientsList = new List<string>(); // !!!!! List of missing ingredients from the current step. !!!!!
 
@@ -54,14 +54,15 @@ public class ContainerDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Debug.Log("PlayerStatistics.currentLvl: " + PlayerStatistics.currentLvl);
         if (PlayerStatistics.currentLvl == allowedLvl)
         {
-            gameObject.GetComponent<Collider>().enabled = true;
+            GetComponent<Collider>().enabled = true;
         }
 
         else
         {
-            gameObject.GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().enabled = false;
         }
 
         currentStageOfProcess = taskManager.currentStageOfProcess;
@@ -129,6 +130,8 @@ public class ContainerDetector : MonoBehaviour
                 ingredientsMissing = true;
             }
         }
+
+        Debug_CheckForMissingIngredients("Hi");
 
         if (ingredientsMissing)
         {

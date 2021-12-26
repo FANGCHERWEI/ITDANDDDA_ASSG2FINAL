@@ -20,8 +20,6 @@ public class SensorCollisionDetector : MonoBehaviour
     public int requiredNumChurns; // The number of times a player has to complete a churning motion.
     public bool churningMotionTaskCompleted;
     public bool showChurningTool;
-    public float delayBeforeLvlComplete;
-    public bool allowRunCoroutine;
     
     private bool allIngredientsContained;
     private int allowedLvl;
@@ -53,8 +51,8 @@ public class SensorCollisionDetector : MonoBehaviour
 
         else if ((!taskManager.allowSensorCollisionDetectorOperation || !allIngredientsContained) && allowedLvl == PlayerStatistics.currentLvl)
         {
-            // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
-            //           ", allIngredientsContained: " + allIngredientsContained);
+             // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
+             //           ", allIngredientsContained: " + allIngredientsContained);
 
             GetComponent<Collider>().enabled = false;
         }
@@ -85,7 +83,7 @@ public class SensorCollisionDetector : MonoBehaviour
 
         if (timesEachSensorActivated.ContainsKey(collidedObjEnterName) && allIngredientsContained)
         {
-            // Debug.Log("Churning tool collided with sensor. Sensor: " + collidedObjEnterName);
+            Debug.Log("Churning tool collided with sensor. Sensor: " + collidedObjEnterName);
             CheckSensorCollision(collidedObjEnterName);
         }
 
@@ -100,7 +98,7 @@ public class SensorCollisionDetector : MonoBehaviour
         {
             Debug.Log("Churning motion task completed.");
 
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<MeshRenderer>().enabled = false;
 
             numTimesTaskCompleted += 1;
             taskManager.numTimesChurningCompleted = numTimesTaskCompleted;

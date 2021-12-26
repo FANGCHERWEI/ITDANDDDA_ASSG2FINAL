@@ -22,6 +22,8 @@ public class TaskManager : MonoBehaviour
 
     public static bool gameStart;
     public string currentStageOfProcess;
+    public bool thing = true;
+    public bool thing2 = true;
 
     // The below variables contain the steps for each task in order and are used to identify what order script(s) will run in each stage and what script(s) is/are currently running.
     private string[] stage01TaskNamesInOrder = { "Churning" };
@@ -34,19 +36,24 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
-        if (gameStart)
+        // Debug.Log("Gamestart status: " + gameStart);
+        if (gameStart && thing)
         {
             CountdownTimer.timerIsRunning = true;
             SaveLevelData.userIDRetrieved = false;
             SaveLevelData.getUsernameFlag = true;
             SaveLevelData.highScoresRetrived = false;
+
+            thing = false;
         }
 
-        else
+        else if (!gameStart && thing2)
         {
             // This else statement resets the value of the countdown timer so that it will restart when changing levels.
             CountdownTimer.timeRemaining = 1801;
             CountdownTimer.timerIsRunning = false;
+
+            thing2 = false;
         }
     }
 
@@ -66,8 +73,9 @@ public class TaskManager : MonoBehaviour
             toggleGameObjects.taskCompletedCanvasStage02.SetActive(true);
         }
 
-        currentStageOfProcess = allTaskNamesInOrder[PlayerStatistics.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.
-        // playerStats.currentLvl += 1;
+        currentStageOfProcess = allTaskNamesInOrder[PlayerStatistics.currentLvl][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.
+        
+        PlayerStatistics.currentLvl += 1;
 
         FindStep01();
     }
@@ -81,6 +89,7 @@ public class TaskManager : MonoBehaviour
 
         if (PlayerStatistics.currentLvl == 1)
         {
+            
             ResetValuesAfterTaskCompletion();
 
             currentStageOfProcess = "Completed";
@@ -133,8 +142,8 @@ public class TaskManager : MonoBehaviour
 
     public void FindStep01()
     {
-        Debug.Log("Current stage of process: " + currentStageOfProcess);
-        Debug.Log("Current level: " + PlayerStatistics.currentLvl);
+        // Debug.Log("Current stage of process: " + currentStageOfProcess);
+        // Debug.Log("Current level: " + PlayerStatistics.currentLvl);
 
         if (currentStageOfProcess == "Churning")
         {
@@ -160,6 +169,8 @@ public class TaskManager : MonoBehaviour
         // Assigns values to variables so that they are not empty and have the necessary values for the script to run.
 
         gameStart = true; // Allows the main timer to run.
+        thing = true;
+        thing2 = true;
 
         currentStageOfProcess = stage01TaskNamesInOrder[0];
 
@@ -167,6 +178,7 @@ public class TaskManager : MonoBehaviour
         allTaskNamesInOrder.Add(stage02TaskNamesInOrder);
 
         numTimesChurningCompleted = 0;
+        // PlayerStatistics.currentLvl = 1; // Delete this later pls.
 
         allowSensorCollisionDetectorOperation = false;
         allowCookingDetectorOperation = false;
