@@ -42,7 +42,7 @@ public class SensorCollisionDetector : MonoBehaviour
     {
         allIngredientsContained = containerDetector.allIngredientsContained;
 
-        if (taskManager.allowSensorCollisionDetectorOperation && allIngredientsContained && allowedLvl == playerStats.currentLvl)
+        if (taskManager.allowSensorCollisionDetectorOperation && allIngredientsContained && allowedLvl == PlayerStatistics.currentLvl)
         {
             // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
             //           ", allIngredientsContained: " + allIngredientsContained);
@@ -51,7 +51,7 @@ public class SensorCollisionDetector : MonoBehaviour
             GetComponent<MeshRenderer>().enabled = true;
         }
 
-        else if ((!taskManager.allowSensorCollisionDetectorOperation || !allIngredientsContained) && allowedLvl == playerStats.currentLvl)
+        else if ((!taskManager.allowSensorCollisionDetectorOperation || !allIngredientsContained) && allowedLvl == PlayerStatistics.currentLvl)
         {
             // Debug.Log("taskManager.allowSensorCollisionDetectorOperation: " + taskManager.allowSensorCollisionDetectorOperation +
             //           ", allIngredientsContained: " + allIngredientsContained);

@@ -29,7 +29,7 @@ public class TaskManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        InitializeVariables();
     }
 
     private void Update()
@@ -66,7 +66,7 @@ public class TaskManager : MonoBehaviour
             toggleGameObjects.taskCompletedCanvasStage02.SetActive(true);
         }
 
-        currentStageOfProcess = allTaskNamesInOrder[playerStats.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.
+        currentStageOfProcess = allTaskNamesInOrder[PlayerStatistics.currentLvl - 1][0]; // Since allTaskNamesInOrder is zero based while levels are not, this statement reduces the current level by one.
         // playerStats.currentLvl += 1;
 
         FindStep01();
@@ -79,17 +79,17 @@ public class TaskManager : MonoBehaviour
         allowSensorCollisionDetectorOperation = false; 
         numTimesChurningCompleted = timesCompleted;
 
-        if (playerStats.currentLvl == 1)
+        if (PlayerStatistics.currentLvl == 1)
         {
             ResetValuesAfterTaskCompletion();
 
             currentStageOfProcess = "Completed";
 
-            ShowTaskEndMenu(playerStats.currentLvl);
+            ShowTaskEndMenu(PlayerStatistics.currentLvl);
             return;
         }
 
-        else if (playerStats.currentLvl == 2)
+        else if (PlayerStatistics.currentLvl == 2)
         {
             if (numTimesChurningCompleted == 1 || numTimesChurningCompleted == 2)
             {
@@ -109,7 +109,7 @@ public class TaskManager : MonoBehaviour
         allowCookingDetectorOperation = false;
         numTimesCookingCompleted = timesCompleted;
 
-        if (playerStats.currentLvl == 2)
+        if (PlayerStatistics.currentLvl == 2)
         {
             if (numTimesCookingCompleted == 1)
             {
@@ -125,7 +125,7 @@ public class TaskManager : MonoBehaviour
 
                 currentStageOfProcess = "Completed";
 
-                ShowTaskEndMenu(playerStats.currentLvl);
+                ShowTaskEndMenu(PlayerStatistics.currentLvl);
                 return;
             }
         }
@@ -134,7 +134,7 @@ public class TaskManager : MonoBehaviour
     public void FindStep01()
     {
         Debug.Log("Current stage of process: " + currentStageOfProcess);
-        Debug.Log("Current level: " + playerStats.currentLvl);
+        Debug.Log("Current level: " + PlayerStatistics.currentLvl);
 
         if (currentStageOfProcess == "Churning")
         {

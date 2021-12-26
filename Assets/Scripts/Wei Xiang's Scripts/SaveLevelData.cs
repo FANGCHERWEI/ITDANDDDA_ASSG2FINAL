@@ -138,7 +138,7 @@ public class SaveLevelData : MonoBehaviour
         {
             // check for the current level that is played
             // retrieve the value of the score
-            if (playerStatistics.currentLvl == 1)
+            if (PlayerStatistics.currentLvl == 1)
             {
                 // retrieve the score for level 1
                 currentLevel1Score = playerStatistics.PercentagePointsLvl01;
@@ -148,7 +148,7 @@ public class SaveLevelData : MonoBehaviour
                 DisplayTimePlayedLevel1(timePlayedLevel1);
             }
 
-            else if (playerStatistics.currentLvl == 2)
+            else if (PlayerStatistics.currentLvl == 2)
             {
                 // retrieve the score for level 2
                 currentLevel2Score = playerStatistics.PercentagePointsLvl02;

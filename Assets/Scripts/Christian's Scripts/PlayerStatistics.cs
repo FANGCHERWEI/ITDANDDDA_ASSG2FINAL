@@ -15,7 +15,7 @@ public class PlayerStatistics : MonoBehaviour
     public string[] gradeNames;
 
     public string grade; // Text grade of a student.
-    public int currentLvl; // Current level the student is in.
+    public static int currentLvl; // Current level the student is in.
 
     // The below variables set the default values for their respective variables.
     private float startingPercentagePointsLvl01 = 100f;
@@ -55,7 +55,7 @@ public class PlayerStatistics : MonoBehaviour
     {
         // Assigns values to variables so that they are not empty and have the necessary values for the script to run.
 
-        currentLvl = 1; // For testing only!!! The current level should only be based on buttons presses or UI elements.
+        currentLvl = 2; // For testing only!!! The current level should only be based on buttons presses or UI elements.
 
         // Bottom two if statements make sure the player always begins with points to lose.
         if (PercentagePointsLvl01 <= 0f)

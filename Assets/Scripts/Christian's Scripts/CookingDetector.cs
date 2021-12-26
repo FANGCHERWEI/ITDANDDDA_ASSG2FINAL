@@ -42,6 +42,16 @@ public class CookingDetector : MonoBehaviour
 
     private void Update()
     {
+        if (numTimesTaskCompleted == 0)
+        {
+            timeRemaining = 5f;
+        }
+
+        else if (numTimesTaskCompleted == 1)
+        {
+            timeRemaining = 30f;
+        }
+
         allIngredientsContained = containerDetector.allIngredientsContained;
 
         if (!toggleGameObjects.allowCooking)
@@ -50,7 +60,7 @@ public class CookingDetector : MonoBehaviour
         }
 
         if (allIngredientsContained && taskManager.allowCookingDetectorOperation && 
-            allowedLvl == playerStats.currentLvl)
+            allowedLvl == PlayerStatistics.currentLvl)
         {
             if (toggleGameObjects.allowCooking)
             {

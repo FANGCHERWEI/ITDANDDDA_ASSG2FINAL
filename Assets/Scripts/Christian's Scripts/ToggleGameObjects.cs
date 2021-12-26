@@ -51,14 +51,14 @@ public class ToggleGameObjects : MonoBehaviour
 
     public void StartCanvasButton()
     {
-        playerStats.currentLvl = 1;
+        PlayerStatistics.currentLvl = 1;
     }
 
     public void DeactivateTaskCompletionCanvasStage01()
     {
         // Deactivates the stage 1 task completion canvas.
 
-        playerStats.currentLvl = 2; // Changes the current level to 2.
+        PlayerStatistics.currentLvl = 2; // Changes the current level to 2.
         taskCompletedCanvasStage01.SetActive(false);
         taskManager.gameStart = true; // Allows the timer to start running again.
     }

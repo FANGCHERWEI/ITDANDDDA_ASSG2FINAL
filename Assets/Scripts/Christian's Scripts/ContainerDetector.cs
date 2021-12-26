@@ -54,7 +54,7 @@ public class ContainerDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerStats.currentLvl == allowedLvl)
+        if (PlayerStatistics.currentLvl == allowedLvl)
         {
             gameObject.GetComponent<Collider>().enabled = true;
         }
@@ -212,14 +212,14 @@ public class ContainerDetector : MonoBehaviour
 
     private void Debug_CheckIfLvlAllowed()
     {
-        if (playerStats.currentLvl == allowedLvl)
+        if (PlayerStatistics.currentLvl == allowedLvl)
         {
-            Debug.Log("Current Lvl: " + playerStats.currentLvl + " Mesh: " + gameObject.name + " - Allowed");
+            Debug.Log("Current Lvl: " + PlayerStatistics.currentLvl + " Mesh: " + gameObject.name + " - Allowed");
         }
 
         else
         {
-            Debug.Log("Current Lvl: " + playerStats.currentLvl + " Mesh: " + gameObject.name + " - Denied");
+            Debug.Log("Current Lvl: " + PlayerStatistics.currentLvl + " Mesh: " + gameObject.name + " - Denied");
         }
     }
 }

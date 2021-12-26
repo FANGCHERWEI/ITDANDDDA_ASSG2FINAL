@@ -52,12 +52,12 @@ public class IngredientDropSensor : MonoBehaviour
         // Calculates how many points are lost and relates it to the level that the player is currently in.
 
         // The bottom if-else statement makes sure that the player loses points only if INGREDIENTS are dropped, not any other object.
-        if (playerStats.currentLvl == 1)
+        if (PlayerStatistics.currentLvl == 1)
         {
             playerStats.PercentagePointsLvl01 -= ingredientDropPenalty; // Reduces the points for level 1.
         }
 
-        else if (playerStats.currentLvl == 2)
+        else if (PlayerStatistics.currentLvl == 2)
         {
             playerStats.PercentagePointsLvl02 -= ingredientDropPenalty; // Reduces the points for level 2.
         }
